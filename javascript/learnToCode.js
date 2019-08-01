@@ -58,64 +58,123 @@
 //     console.log("You dont have enough money!");
 // }
 
-var students = ["Timmy", "Janessa", "Arun"];
+// var students = ["Timmy", "Janessa", "Arun"];
+//
+// var naughtyList = [];
+// naughtyList.push(students[0]);
+//
+// var index = naughtyList.indexOf("Timmy");
+// var index2 = naughtyList.indexOf("Arun");
+//
+// if (index > -1) {
+//     naughtyList = naughtyList.splice(index, 1);
+// }
+//
+// console.log(area(10,15));
+//
+//
+// function area(length, width) {
+//     return length * width;
+// }
+//
+// var bankBalance = 500;
+//
+// function makeTransaction(priceOfSale) {
+//     console.log(bankBalance);
+//     if (priceOfSale <= bankBalance) {
+//         bankBalance -= priceOfSale;
+//         console.log("Purchase Successful");
+//     } else{
+//         console.log("Insufficient Funds");
+//     }
+// }
+//
+// makeTransaction(79.00);
+// makeTransaction(2.32);
+// makeTransaction(10.45);
+// makeTransaction(450.00);
+//
+// var transaction = function(priceOfSale) {
+//     console.log(bankBalance);
+//     if (priceOfSale <= bankBalance) {
+//         bankBalance -= priceOfSale;
+//         console.log("Purchase Successful");
+//     } else{
+//         console.log("Insufficient Funds");
+//     }
+// };
+//
+// transaction(10);
+//
+// var printCustomerName = function (first, last) {
+//     console.log("First Name: " + first + " Last Name: " + last);
+// };
+//
+// var applyForCredtiCard = function(credtiScore, soul) {
+// //    call some functions to process application
+// };
+//
+// var bankOperations = [];
+// bankOperations.push(transaction);
+// bankOperations.push(printCustomerName);
+// bankOperations.push(applyForCredtiCard);
 
-var naughtyList = [];
-naughtyList.push(students[0]);
 
-var index = naughtyList.indexOf("Timmy");
-var index2 = naughtyList.indexOf("Arun");
 
-if (index > -1) {
-    naughtyList = naughtyList.splice(index, 1);
+// var student0 = {
+//     firstName: "Jayne",
+//     lastName: "Looo",
+//     age: 8,
+//     greeting:
+// };
+//
+// console.log(student0.greeting());
+//
+// // Creates a new empty object
+// var student1 = new Object();
+// student1.firstName = "John";
+// student1.lastName = "Parker";
+// student1.age = 7;
+//
+// var student2 = {};
+// student2.firstName = "Zack";
+// student2.label = "Bobo";
+// student2.age = 5;
+
+
+//
+var students = [];
+
+function Student(first, last, age) {
+    this.firstName = first;
+    this.lastName = last;
+    this.age = age;
+    this.greeting = function () {
+        return "Hi, I'm " + this.firstName + " and I'm " + this.age + " years old.";
+    };
 }
 
-console.log(area(10,15));
+students.push(new Student("Jenny","Laga",5));
+students.push(new Student("Timmy","Turner",8));
+students.push(new Student("Carl","Jr",4));
 
+var student = students[0];
 
-function area(length, width) {
-    return length * width;
+for (var key in student){
+    console.log(student[key]);
 }
 
-var bankBalance = 500;
+// students.push(student0);
+// students.push(student1);
+// students.push(student2);
+//
+// for (var index = 0; index < students.length; index++) {
+//     var student = students[index];
+//     console.log(student.greeting());
+// }
 
-function makeTransaction(priceOfSale) {
-    console.log(bankBalance);
-    if (priceOfSale <= bankBalance) {
-        bankBalance -= priceOfSale;
-        console.log("Purchase Successful")
-    } else{
-        console.log("Insufficient Funds")
-    }
-}
-
-makeTransaction(79.00);
-makeTransaction(2.32);
-makeTransaction(10.45);
-makeTransaction(450.00)
-
-var transaction = function(priceOfSale) {
-    console.log(bankBalance);
-    if (priceOfSale <= bankBalance) {
-        bankBalance -= priceOfSale;
-        console.log("Purchase Successful")
-    } else{
-        console.log("Insufficient Funds")
-    }
-};
-
-transaction(10);
-
-var printCustomerName = function (first, last) {
-    console.log("First Name: " + first + " Last Name: " + last);
-};
-
-var applyForCredtiCard = function(credtiScore, soul) {
-//    call some functions to process application
-};
-
-var bankOperations = [];
-bankOperations.push(transaction);
-bankOperations.push(printCustomerName);
-bankOperations.push(applyForCredtiCard);
+// console.log(student.firstName);
+// console.log(student.lastName);
+// console.log(student["firstName"]);
+// console.log(student["lastName"]);
 
